@@ -3,3 +3,4 @@
 /run
 /apidoc
 package-lock.json
+/app/config/default-sql.json
