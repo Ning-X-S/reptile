@@ -1,0 +1,24 @@
+{
+  "name": "reptile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "sequelize": "^5.21.2",
+    "superagent": "^5.1.1",
+    "superagent-charset": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.2"
+  }
+}
