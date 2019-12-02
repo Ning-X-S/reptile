@@ -1,0 +1,10 @@
+
+{
+  "sql": {
+    "host": "172.18.4.180",
+    "user": "",  
+    "password": "",
+    "database": "reptile_test",
+    "port": 3213
+  }
+}

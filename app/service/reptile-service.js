@@ -1,5 +1,6 @@
 const request = require('superagent')
 const cheerio = require('cheerio')
+const Model = require('../model/index')
 
 module.exports = {
   reptile
@@ -15,19 +16,20 @@ async function reptile (url) {
     })
     $(".hotnews ul li").each((index,item) => {
       let $text = $(item).text().replace(/\s/g, '')
-      arr.push($text)
+      arr.push({title: $text})
     })
-    for (let i = 0; i < 2; i++) {
-      arr.push(i)
-    }
-    return {
-      error_code: 0,
-      message: '成功await',
-      data: {
-        list: arr,
-        total: arr.length
+    let reptile = await Model.Reptile.bulkCreate(arr)
+    if (reptile !== null) {
+      console.log(Object.keys(reptile))
+      return {
+        error_code: 0,
+        message: '创建成功',
+        data: {
+          list: arr,
+          total: arr.length
+        }
       }
-    }
+    } 
   } catch (err) {
     return {
       error_code: 11111,

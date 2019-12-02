@@ -11,7 +11,7 @@ const globalConfigInjector = require('./app/middleware/global-injector')
 const STATIC = path.resolve('./static')
 const HTML_404 = fs.readFileSync(path.resolve('./404.html'), 'utf-8')
 
-const port = 7004
+const port = 7777
 const globalConfig = {
   STATIC: STATIC,
   HTML_404: HTML_404
